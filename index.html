@@ -20,7 +20,7 @@
               <p>Тренажёрный зал Групповые занятия Кардио&#160;-&#160;зона</p>
               <p>центр</p>
             </div>
-            <button>Купить абонемент</button>
+            <a class="hero__button" href="#abonements">Купить абонемент</a>
           </div>
           <div class="hero__image">
             <img src="images/content/hero__image.jpg" alt="" />
@@ -56,11 +56,18 @@
         <div class="gym__video">
           <img src="images/content/gym_photo.jpg" alt="" />
           <div class="gym__video-wrapper">
-            <img src="images/content/gym_video.jpg" alt="" />
+            <iframe
+              src="https://www.youtube.com/embed/tUykoP30Gb0?si=AlFptyZ_qYflo89C"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </section>
-      <section class="abonements">
+      <section class="abonements" id="abonements">
         <h2>Абонементы</h2>
         <div class="container">
           <div class="tab">
@@ -79,7 +86,7 @@
                     <p>5000</p>
                     5000 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
                 <div class="card card--active">
                   <p>Дневной</p>
@@ -88,7 +95,7 @@
                     <p>1700</p>
                     1700 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
                 <div class="card">
                   <p>Полный день</p>
@@ -97,7 +104,7 @@
                     <p>2700</p>
                     2700 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
               </div>
             </div>
@@ -107,28 +114,28 @@
                   <p>С тренером</p>
                   <p>12 занятий</p>
                   <div>
-                    <p>5000</p>
-                    5000 <span>&#8381;</span>
+                    <p>30000</p>
+                    30000 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
                 <div class="card card--active">
                   <p>Дневной</p>
                   <p>с 8:00 до 17:00</p>
                   <div>
-                    <p>1700</p>
-                    1700 <span>&#8381;</span>
+                    <p>10200</p>
+                    10200 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
                 <div class="card">
                   <p>Полный день</p>
                   <p>с 8:00 до 22:00</p>
                   <div>
-                    <p>2700</p>
-                    2700 <span>&#8381;</span>
+                    <p>16200</p>
+                    16200 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
               </div>
             </div>
@@ -138,28 +145,28 @@
                   <p>С тренером</p>
                   <p>12 занятий</p>
                   <div>
-                    <p>5000</p>
-                    5000 <span>&#8381;</span>
+                    <p>60000</p>
+                    60000 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
                 <div class="card card--active">
                   <p>Дневной</p>
                   <p>с 8:00 до 17:00</p>
                   <div>
-                    <p>1700</p>
-                    1700 <span>&#8381;</span>
+                    <p>20400</p>
+                    20400 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
                 <div class="card">
                   <p>Полный день</p>
                   <p>с 8:00 до 22:00</p>
                   <div>
-                    <p>2700</p>
-                    2700 <span>&#8381;</span>
+                    <p>32400</p>
+                    32400 <span>&#8381;</span>
                   </div>
-                  <button>купить абонемент</button>
+                  <button class="openPopupBtn" id="openPopupBtn">купить абонемент</button>
                 </div>
               </div>
             </div>
@@ -185,7 +192,7 @@
             </div>
           </div>
           <p>Ежегодные соревнования по CrossFit</p>
-          <button>заполнить заявку</button>
+          <a href="#proposal">заполнить заявку</a>
         </div>
         <div class="promo__image">
           <img src="images/content/promo__image.jpg" alt="" />
@@ -495,14 +502,15 @@
         </div>
       </section>
       <div class="wrapper">
-        <div class="proposal">
+        <section class="proposal" id="proposal">
           <h2>БЕСПЛАТНОЕ занятие</h2>
-          <form action="" class="form">
-            <input type="text" name="name" id="name" placeholder="Имя" />
-            <input type="phone" name="phone" id="phone" placeholder="Телефон" />
+          <div id="nameError" class="error"></div>
+          <form action="" class="form" id="form">
+            <input type="text" name="name" id="name" placeholder="Имя" required />
+            <input type="phone" name="phone" id="phone" placeholder="Телефон" required />
             <button type="submit">Отправить</button>
           </form>
-        </div>
+        </section>
         <section class="contacts">
           <h2>Контакты</h2>
           <div class="contacts__wrapper">
@@ -568,6 +576,13 @@
           </li>
         </ul>
       </footer>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2>Это попап</h2>
+          <p>А ты можешь стать как Железный Арни, если запишешься в наш зал;)</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
